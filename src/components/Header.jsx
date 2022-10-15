@@ -2,9 +2,11 @@
 import React, { useEffect, useState } from "react";
 import "../scss/header.scss";
 import { Link } from "react-router-dom";
-function Header() {
+function Header(props) {
   const [isScroll, setIsScroll] = useState(false);
-
+  const settext = () => {
+    props.setText("abc");
+  };
   useEffect(() => {
     const handleScroll = (event) => {
       if (window.scrollY > 50) {
@@ -22,18 +24,18 @@ function Header() {
   }, []);
   return (
     <div className={isScroll ? "header change" : "header"}>
-      {/* <img alt='' className='logo'></img> */}
+      <img alt='' className='logo'></img>
       <Link to='/' className='navigation'>
-        HOME
+        關於
       </Link>
       <Link to='/' className='navigation'>
-        關於我
+        經歷
       </Link>
-      <Link to='/Article' className='navigation'>
-        文章
-      </Link>
-      <Link to='project' className='navigation'>
+      <Link to='/Home' className='navigation'>
         作品
+      </Link>
+      <Link to='Home' className='navigation'>
+        聯絡
       </Link>
 
       <a href='' className='navigation'></a>
