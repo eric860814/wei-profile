@@ -1,12 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from "react";
-import "../scss/header.scss";
+import "../sass/layout/_header.sass";
 import { Link } from "react-router-dom";
-function Header(props) {
+function Navbar(props) {
   const [isScroll, setIsScroll] = useState(false);
-  const settext = () => {
-    props.setText("abc");
-  };
   useEffect(() => {
     const handleScroll = (event) => {
       if (window.scrollY > 50) {
@@ -15,16 +12,14 @@ function Header(props) {
         setIsScroll(false);
       }
     };
-
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
   return (
     <div className={isScroll ? "header change" : "header"}>
-      <img alt='' className='logo'></img>
+      {/* <img alt='' className='logo'></img> */}
       <Link to='/' className='navigation'>
         關於
       </Link>
@@ -37,9 +32,7 @@ function Header(props) {
       <Link to='Home' className='navigation'>
         聯絡
       </Link>
-
-      <a href='' className='navigation'></a>
     </div>
   );
 }
-export default Header;
+export default Navbar;

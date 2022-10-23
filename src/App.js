@@ -1,15 +1,13 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import logo from "./logo.svg";
 import "./App.css";
-import Contents from "./components/Contents";
-// import ArticlePage from "./components/Article/ArticlePage";
+import Home from "./pages/Home";
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Contents></Contents>}></Route>
-        {/* <Route path='Article' element={<ArticlePage></ArticlePage>}></Route> */}
+        <Route path='/' element={<Home></Home>}></Route>
+        {/* <Route path='/about' elemesnt={<Home></Home>}></Route> */}
       </Routes>
     </BrowserRouter>
   );

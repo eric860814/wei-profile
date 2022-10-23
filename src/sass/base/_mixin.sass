@@ -1,0 +1,106 @@
+
+//RWD
+@mixin rwdmax($max)
+	@media only screen and (max-width: $max + px)  
+		@content
+
+@mixin rwdmin($min)
+	@media only screen and (min-width: $min + px)  
+		@content
+
+//文字大小像素轉rem
+@mixin font-size($size: 16) 
+	font-size: ($size/16) + rem
+
+@function px($px)
+	@return $px / 16 * 1rem
+
+//文字大小像素轉vw/vh
+@function pxTovw($px)
+	@return $px / 1920 * 100vw
+
+@function pxTovh($px)
+	@return $px / 1080 * 100vh
+
+//IE判斷
+@mixin ie11Hack
+	@media screen and (-ms-high-contrast: active),(-ms-high-contrast: none)
+		@content
+		
+//火狐判斷
+@mixin firefoxHack
+	@-moz-document url-prefix()
+		@content
+
+//背景圖
+@mixin bg($url,$size,$repeat,$pos)
+	background-image: url($url)
+	background-size: $size
+	background-repeat: $repeat
+	background-position: $pos
+
+//文字設定
+=fontSet($font: $JhengHei, $fw: normal, $size: px(16), $lh: 1, $color: inherit, $ls: normal)
+	font-family: $font
+	font-weight: $fw
+	font-size: $size
+	line-height: $lh
+	color: $color
+	letter-spacing: $ls
+
+//flex
+=flex($display: flex, $wrap: nowrap, $direction: row, $x: center, $y: center)
+	display: $display
+	flex-wrap: $wrap
+	flex-direction: $direction
+	justify-content: $x
+	align-items: $y
+
+// absolute-center
+=posCenter
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%,-50%)
+
+// 文字溢出加省略號 ...
+=ellipsis($line: 2, $lh: 32px, $height: $line * $lh)
+	display: block
+	overflow: hidden
+	display: -webkit-box
+	-webkit-box-orient: vertical
+	-webkit-line-clamp: $line
+	line-height: $lh
+	max-height: $line * $lh
+	height: $height
+
+//placeholder
+=placeholder($font: $basic, $color: black, $size: px(16))
+	&::placeholder
+		font-family: $font
+		font-size: $size
+		color: $color
+		opacity: 1
+		overflow: visible
+		@if $ls != ''
+			letter-spacing: $ls
+
+
+// 後續新增
+=ellip($line: 2)
+	display: block
+	overflow: hidden
+	display: -webkit-box
+	-webkit-box-orient: vertical
+	-webkit-line-clamp: $line
+
+// circle
+@mixin circle($px)
+	width: $px + px
+	height: $px + px
+	border-radius: 50%
+
+@mixin allflex
+	display: flex
+	justify-content: center
+	align-items: center
