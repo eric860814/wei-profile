@@ -13,7 +13,7 @@ export const Data = {
           time: "2021.06-2021-08",
           url: "",
           img: require("../images/1.png"),
-          text: "aaa",
+          text: "安安",
         },
         {
           id: 1,
@@ -21,7 +21,7 @@ export const Data = {
           time: "2021.06-2021-08",
           url: "",
           img: require("../images/2.png"),
-          text: "123",
+          text: "ㄅ ",
         },
         {
           id: 2,
