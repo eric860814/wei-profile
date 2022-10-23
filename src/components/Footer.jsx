@@ -3,7 +3,7 @@ import React from "react";
 export default () => {
   return (
     <div className='footer'>
-      <div>abc</div>
+      <div>abdc</div>
     </div>
   );
 };
