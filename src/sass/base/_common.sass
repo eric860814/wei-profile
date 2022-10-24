@@ -1,0 +1,136 @@
+//共用
+  
+*
+  outline: none
+  -webkit-tap-highlight-color: transparent
+
+html
+  font-size: 100%
+  &.scrollbarStyle
+    scrollbar-width: thin //for Firefox
+    scrollbar-color: rgba(108, 110, 113, 1) transparent //for Firefox
+    body
+      //↓↓↓卷軸樣式↓↓↓
+      &::-webkit-scrollbar-track
+        border-radius: 10px
+        // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3)
+      &::-webkit-scrollbar
+        width: 5px
+        +rwdmax(768)
+          display: none
+      &::-webkit-scrollbar-thumb
+        border-radius: 10px
+        background-color: rgba(0, 0, 0, .2)
+        // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3)
+        &:hover
+          background-color: rgba(0, 0, 0, .4)
+  //Mac系統以外或是MacOS BigSur以上版本
+  &:not(.isMac),&.isMacBigSurUp
+    width: 100vw
+    body
+      width: 100vw
+      overflow-y: auto
+      overflow-x: hidden !important
+      -webkit-overflow-scrolling: touch
+
+  body
+    font-family: $basic
+    font-weight: normal
+    letter-spacing: .5px
+
+input
+  font-family: $basic
+
+
+// aost
+// [data-aost]
+//   // animations
+//   &[data-aost-fade]
+//     opacity: 0
+//     &.aost-show
+//       opacity: 1
+//       transition: opacity var(--trans-m)
+//   &[data-aost-fade-up]
+//     opacity: 0
+//     transform: translateY(50px)
+//     &.aost-show
+//       opacity: 1
+//       transform: translateY(0)
+//       transition: opacity var(--trans-m), transform var(--trans-m)
+//   &[data-aost-fade-down]
+//     opacity: 0
+//     transform: translateY(-50px)
+//     &.aost-show
+//       opacity: 1
+//       transform: translateY(0)
+//       transition: opacity var(--trans-m), transform var(--trans-m)
+//   &[data-aost-fade-right]
+//     opacity: 0
+//     transform: translateX(50px)
+//     &.aost-show
+//       opacity: 1
+//       transform: translateY(0)
+//       transition: opacity var(--trans-m), transform var(--trans-m)
+//   &[data-aost-fade-left]
+//     opacity: 0
+//     transform: translateX(-50px)
+//     &.aost-show
+//       opacity: 1
+//       transform: translateY(0)
+//       transition: opacity var(--trans-m), transform var(--trans-m)
+//   &[data-aost-clip]
+//     opacity: 0
+//     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0)
+//     &.aost-show
+//       opacity: 1
+//       clip-path: polygon(0 0, 100% 0, 100% 115%, 0 100%)
+//       transition: opacity var(--trans-m), clip-path var(--trans-m)
+//   &[data-aost-clip-left]
+//     opacity: 0
+//     clip-path: polygon(0 0, 0 0, 0 100%, 0 100%)
+//     &.aost-show
+//       opacity: 1
+//       clip-path: polygon(0 0, 110% 0, 100% 100%, 0 100%)
+//       transition: opacity var(--trans-m), clip-path var(--trans-m)
+//   &[data-aost-clip-right]
+//     opacity: 0
+//     clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%)
+//     &.aost-show
+//       opacity: 1
+//       clip-path: polygon(-10% 0, 100% 0, 100% 100%, 0% 100%)
+//       transition: opacity var(--trans-m), clip-path var(--trans-m)
+//   &[data-aost-scale]
+//     opacity: 0
+//     transform: scale(.5)
+//     &.aost-show
+//       opacity: 1
+//       transform: scale(1)
+//       transition: opacity var(--trans-m), clip-path var(--trans-m)
+
+
+// .visuallyhidden
+//   position: absolute
+//   clip: rect(1px, 1px, 1px, 1px)
+//   clip-path: inset(0px 0px 99.9% 99.9%)
+//   overflow: hidden
+//   height: 1px
+//   width: 1px
+//   padding: 0
+//   border: 0
+  
+// .d-none
+//   display: none !important
+
+// .lazy
+//   opacity: 0
+//   &.loaded
+//     opacity: 1
+//     transition: opacity 0.5s ease-in-out
+// .swiper-lazy
+//   opacity: 0
+//   &.swiper-lazy-loaded
+//     opacity: 1
+//     transition: opacity 0.5s ease-in-out
+
+
+

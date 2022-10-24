@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper";
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/autoplay";
+// import "swiper/css/autoplay";
 // eslint-disable-next-line import/no-anonymous-default-export
 export default (props) => {
   return (
