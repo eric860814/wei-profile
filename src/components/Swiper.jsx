@@ -6,7 +6,7 @@ import "swiper/css";
 // eslint-disable-next-line import/no-anonymous-default-export
 export default (props) => {
   return (
-    <div className=''>
+    <div className='swiper_wrap'>
       <Swiper
         modules={[Autoplay, Navigation]}
         spaceBetween={50}
@@ -14,22 +14,24 @@ export default (props) => {
         loop
         autoplay
         navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".swiper-next",
+          prevEl: ".swiper-prev",
         }}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}>
         {props.SwiperData.map((element) => {
           return (
             <SwiperSlide key={element.id}>
-              <img alt='' src={element.img}></img>
-              <p>{element.text}</p>
+              <a href={element.url} target="_blank">
+                <img alt='' src={element.img}></img>
+                <p>{element.title}</p>
+              </a>
             </SwiperSlide>
           );
         })}
       </Swiper>
-      <button className='swiper-button-prev'>prev</button>
-      <button className='swiper-button-next'>next</button>
+      <div className='swiper-prev icon-arrow_left'></div>
+      <div className='swiper-next icon-arrow_right'></div>
     </div>
   );
 };

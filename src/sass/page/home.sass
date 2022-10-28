@@ -1,14 +1,123 @@
-
+//變數
+@import ../base/_variable
+//函式
+@import ../base/_mixin
+  
 .homeHead
   max-width: 500px
   width: 90%
   margin: 0 auto
   .sub
-    font-size: px(26)
-
+    // font-size: px)
+    font-weight: 600
   .title
-    margin-top: 10px
-    font-size: px(40)
+    font-weight: 600
+    font-size: px(50)
+    letter-spacing: 0.1rem
 
   .p
-    margin-top: 5px
+    margin-top: 10px
+    line-height: 1.5
+
+
+.homeProfile
+  padding: 100px 0
+  background-color: #f5f5f5
+  .pro_wrap
+    max-width: 1200px
+    width: 90%
+    margin: 0 auto
+    display: flex
+  .pro_left
+    width: 50%
+  .pro_right
+    width: 50%
+
+.homeExperience
+  min-height: 80vh
+  padding: 100px 0
+  .exper_wrap
+    max-width: 1200px
+    width: 90%
+    margin: 0 auto
+    display: flex
+  .exper_left
+    width: 400px
+    .homeHead
+      position: sticky  
+      top: 100px
+      margin: 0
+  .exper_right
+    width: calc(100% - 400px)
+  .exper_list
+    width: 95%
+    margin-left: auto
+  .each_list
+    position: relative
+    display: flex
+    padding-left: 50px
+    border-left: 1px dashed rgba(#000,.3)
+  .list_pic
+    width: 100px
+    margin-left: 50px
+    position: absolute
+    top: 80px
+    right: 0
+
+  .list_word
+    flex: 1% 1 0
+    .list_job
+      font-size: px(22)
+      font-weight: 600
+    .list_company
+      margin-top: 15px
+      font-size: px(18)
+      font-weight: 600
+      display: flex
+      font-family: 'Noto Sans TC'
+      span
+        margin-left: auto
+    .list_ct
+      margin-top: 20px
+      font-family: 'Noto Sans TC'
+      li
+        &:not(:first-child)
+          margin-top: 10px
+
+
+.homeProject
+  min-height: 80vh
+  padding: 100px 0 
+  .homeHead
+    text-align: center
+  .projectSwiper
+    position: relative
+    max-width: 1600px
+    width: 90%
+    margin: 0 auto
+    margin-top: 60px
+  .swiper-prev
+    position: absolute
+    top: 50%
+    left: -20px
+    transform: translate(-100%,-50%)
+    font-size: px(30)
+    cursor: pointer
+  .swiper-next
+    position: absolute
+    top: 50%
+    right: -20px
+    transform: translate(100%,-50%)
+    font-size: px(30)
+    cursor: pointer
+  .swiper-slide
+    p
+      margin-top: 10px
+      text-align: center
+      font-size: px(18)
+
+.homeContact
+  padding: 100px 0
+  .homeHead
+    text-align: center 
+
