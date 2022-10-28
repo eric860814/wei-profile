@@ -47,6 +47,7 @@ export const Data = {
           img: require("../images/3.png"),
           text: "123",
         },
+        
         // { id: 3, img: require("../images/4.png"), text: "123" },
       ],
     },
