@@ -22,8 +22,10 @@ export default (props) => {
         {props.SwiperData.map((element) => {
           return (
             <SwiperSlide key={element.id}>
-              <a href={element.url} target="_blank">
-                <img alt='' src={element.img}></img>
+              <a className="swiper-a" href={element.url} target="_blank">
+                <div className="swiper-pic">
+                  <img alt='' src={element.img}></img>
+                </div>
                 <p>{element.title}</p>
               </a>
             </SwiperSlide>
