@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState ,useRef} from "react";
 import Navbar from "../components/Navbar";
 import Swiper from "../components/Swiper";
 import Footer from "../components/Footer";
@@ -11,8 +11,18 @@ import exper1 from "../images/exper01.jpg";
 import frofile1 from "../images/profile01.jpg";
 
 function Home() {
+  const testRef = useRef(null)
+  const click = () =>{
+    testRef.current.scrollIntoView()
+    console.log(123)
+  }
+useEffect(()=>{
+      console.log(testRef.current.offsetTop);
+     
+},[testRef])
   return (
     <>
+      <button onClick={click}>123</button>
       <Navbar></Navbar>
       <main>
         <div className='homeProfile'>
@@ -31,7 +41,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className='homeExperience'>
+        <div ref={testRef} className='homeExperience'>
           <div className='exper_wrap'>
             <div className='exper_left'>
               <div className='homeHead'>
