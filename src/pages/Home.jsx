@@ -16,10 +16,10 @@ function Home() {
     testRef.current.scrollIntoView()
     console.log(123)
   }
-useEffect(()=>{
-      console.log(testRef.current.offsetTop);
-     
-},[testRef])
+  useEffect(()=>{
+        console.log(testRef.current.offsetTop);
+      
+  },[testRef])
   return (
     <>
       <button onClick={click}>123</button>
