@@ -29,7 +29,7 @@ export const Data = {
           time: "2020/04~2020/05",
           url: "https://www.perfectcompanion.com.tw/tw",
           img: require("../images/project01.jpg"),
-          text: "安安",
+          text: "資料待補充",
         },
         {
           id: 1,
@@ -37,7 +37,7 @@ export const Data = {
           time: "2021/02~2021/06",
           url: "https://www.rt-develop.com.tw/tw",
           img: require("../images/project02.jpg"),
-          text: "ㄅ ",
+          text: "資料待補充",
         },
         {
           id: 2,
@@ -45,7 +45,7 @@ export const Data = {
           time: "2021.06-2021-08",
           url: "https://www.kingrichfoods.com/tw",
           img: require("../images/project03.jpg"),
-          text: "123",
+          text: "資料待補充",
         },
         {
           id: 3,
@@ -53,7 +53,7 @@ export const Data = {
           time: "2021/12~2022/03",
           url: "https://www.franzcollection.com.tw/tw",
           img: require("../images/project04.jpg"),
-          text: "123",
+          text: "資料待補充",
         },
         {
           id: 4,
@@ -61,7 +61,7 @@ export const Data = {
           time: "2022/04~2022/04",
           url: "https://www.tsmc-foundation.org/art-festival/2022/",
           img: require("../images/project05.jpg"),
-          text: "123",
+          text: "資料待補充",
         },
       ],
     },

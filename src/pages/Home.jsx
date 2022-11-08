@@ -10,22 +10,22 @@ import "../sass/page/home.sass";
 import exper1 from "../images/exper01.jpg";
 import frofile1 from "../images/profile01.jpg";
 
-function Home() {
+const Home = () => {
   const testRef = useRef(null)
   const click = () =>{
     testRef.current.scrollIntoView()
     console.log(123)
   }
-  useEffect(()=>{
-        console.log(testRef.current.offsetTop);
-      
-  },[testRef])
+  // useEffect(()=>{
+  //   console.log(testRef.current.offsetTop);
+  // },[testRef])
+  
   return (
     <>
-      <button onClick={click}>123</button>
+      {/* <button onClick={click}>123</button> */}
       <Navbar></Navbar>
       <main>
-        <div className='homeProfile'>
+        <div className='homeProfile' id='homeProfile'>
           <div className='pro_wrap'>
             <div className='pro_left'>
               <div className='homeHead'>
@@ -41,7 +41,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div ref={testRef} className='homeExperience'>
+        <div ref={testRef} className='homeExperience' id="homeExperience">
           <div className='exper_wrap'>
             <div className='exper_left'>
               <div className='homeHead'>
@@ -67,15 +67,15 @@ function Home() {
                       <li>4. 與 PM 溝通協調客戶需求，提供合理的解決方案。</li>
                     </ul>
                   </div>
-                  <div className='list_pic'>
+                  {/* <div className='list_pic'>
                     <img alt='' src={exper1}></img>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className='homeProject'>
+        <div className='homeProject' id='homeProject'>
           <div className='homeHead'>
             <div className='sub'>{Data.projectHead.sub}</div>
             <div className='title'>{Data.projectHead.title}</div>
@@ -85,7 +85,7 @@ function Home() {
             <Swiper SwiperData={Data.projectItem.project.data}></Swiper>
           </div>
         </div>
-        <div className='homeContact'>
+        <div className='homeContact' id='homeContact'>
           <div className='homeHead'>
             <div className='sub'>{Data.contactHead.sub}</div>
             <div className='title'>{Data.contactHead.title}</div>

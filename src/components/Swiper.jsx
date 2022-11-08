@@ -25,19 +25,31 @@ export default (props) => {
   return (
     <div className='swiper_wrap'>
       <ProjectModal setShow={setShow} show={show} data={data}></ProjectModal>
-      <button>All</button>
+      {/* <button>All</button>
       <button onClick={() => selectDate("2020")}>2020</button>
       <button onClick={() => selectDate("2021")}>2021</button>
-      <button onClick={() => selectDate("2022")}>2022</button>
+      <button onClick={() => selectDate("2022")}>2022</button> */}
       <Swiper
         modules={[Autoplay, Navigation]}
-        spaceBetween={50}
-        slidesPerView={3}
+        // spaceBetween={30}
+        slidesPerView={1}
         loop
         autoplay
         navigation={{
           nextEl: ".swiper-next",
           prevEl: ".swiper-prev",
+        }}
+        breakpoints={{
+          // when window width is >= 640px
+          1200: {
+            // spaceBetween: 50,
+            slidesPerView: 3,
+          },
+          // when window width is >= 768px
+          768: {
+            // spaceBetween: 10,
+            slidesPerView: 2,
+          },
         }}
         // onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}>
@@ -54,8 +66,10 @@ export default (props) => {
           );
         })}
       </Swiper>
-      <div className='swiper-prev icon-arrow_left'></div>
-      <div className='swiper-next icon-arrow_right'></div>
+      <div className="swiper-btn">
+        <div className='swiper-prev icon-arrow_left'></div>
+        <div className='swiper-next icon-arrow_right'></div>
+      </div>
     </div>
   );
 };

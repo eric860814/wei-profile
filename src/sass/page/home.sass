@@ -16,7 +16,8 @@
     //font-family: Philosopher//"Cormorant Garamond"
     line-height: 1.2
     letter-spacing: 0.1rem
-
+    +rwdmax(767)
+      font-size: px(40)
   .p
     margin-top: 10px
     line-height: 1.5
@@ -30,35 +31,65 @@
     width: 90%
     margin: 0 auto
     display: flex
+    +rwdmax(767)
+      flex-direction: column-reverse
   .pro_left
     width: 50%
+    +rwdmax(767)
+      width: 100%
+      margin-top: 50px
   .pro_right
     width: 50%
+    +rwdmax(767)
+      width: 100%
+  .homeHead
+    +rwdmax(767)
+      width: 100%
+
 
 .homeExperience
-  min-height: 80vh
+  // min-height: 80vh
   padding: 100px 0
   .exper_wrap
     max-width: 1200px
     width: 90%
     margin: 0 auto
     display: flex
+    +rwdmax(767)
+      flex-direction: column
   .exper_left
     width: 400px
+    +rwdmax(992)
+      width: 300px
+    +rwdmax(767)
+      width: 100%
     .homeHead
       position: sticky  
       top: 100px
       margin: 0
   .exper_right
     width: calc(100% - 400px)
+    +rwdmax(992)
+      width: calc(100% - 300px)
+    +rwdmax(767)
+      width: 100%
   .exper_list
     width: 95%
     margin-left: auto
+    +rwdmax(767)
+      width: 100%
+      margin: 0 auto
+      margin-top: 50px
   .each_list
     position: relative
     display: flex
     padding-left: 50px
     border-left: 1px dashed rgba(#000,.3)
+    +rwdmax(767)
+      border-left: none
+      border-top: 1px dashed rgba(#000,.3)
+      padding-left: 0
+      padding-top: 50px
   .list_pic
     width: 100px
     margin-left: 50px
@@ -82,14 +113,18 @@
     .list_ct
       margin-top: 20px
       font-family: 'Noto Sans TC'
+      padding-left: 20px
+      +rwdmax(767)
+        padding-left: 0
       li
         &:not(:first-child)
           margin-top: 10px
 
 
 .homeProject
-  min-height: 80vh
+  // min-height: 80vh
   padding: 100px 0 
+  background: #fafafa
   .homeHead
     text-align: center
   .projectSwiper
@@ -98,6 +133,11 @@
     width: 90%
     margin: 0 auto
     margin-top: 60px
+  .swiper-btn
+    +rwdmax(767)
+      display: flex
+      justify-content: center
+      margin-top: 10px
   .swiper-prev
     position: absolute
     top: 50%
@@ -105,6 +145,23 @@
     transform: translate(-100%,-50%)
     font-size: px(30)
     cursor: pointer
+    +rwdmax(1200)
+      left: 0
+    +rwdmax(767)
+      position: relative
+      transform: none
+      font-size: px(24)
+      margin-right: 30px
+      &::after
+        position: absolute
+        content: ""
+        width: 1px
+        height: 20px
+        background: #ccc
+        right: -16px
+        top: 50%
+        transform: translate(0,-50%)
+        pointer-events: none
   .swiper-next
     position: absolute
     top: 50%
@@ -112,7 +169,17 @@
     transform: translate(100%,-50%)
     font-size: px(30)
     cursor: pointer
+    +rwdmax(1200)
+      right: 0
+    +rwdmax(767)
+      position: static
+      transform: none
+      font-size: px(24)
   .swiper-a
+    width: 90%
+    margin: 0 auto
+    +rwdmax(767)
+      width: 100%
     &:hover
       .swiper-pic:after
         opacity: 1

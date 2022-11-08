@@ -3,7 +3,8 @@ import React from "react";
 export default () => {
   return (
     <footer className='footer'>
-      <div>abdc</div>
+      <div>Footer</div>
+      <div>ICON & 相關連結待補</div>
     </footer>
   );
 };

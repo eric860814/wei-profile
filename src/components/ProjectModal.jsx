@@ -19,9 +19,21 @@ function ProjectModal(props) {
           <Modal.Title id='contained-modal-title-vcenter'>{props.data.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h4>{props.data.title}</h4>
-          <p>{props.data.text}</p>
           <img src={props.data.img} alt='' />
+          {/* <h4>{props.data.title}</h4> */}
+          <p></p>
+          <div>
+            專案時間：
+            {props.data.time}
+          </div>
+          <div>
+            專案描述：
+            {props.data.text}
+          </div>
+          <p></p>
+          <a href={props.data.url} target="_blank">
+            前往此網站
+          </a>
         </Modal.Body>
         <Modal.Footer></Modal.Footer>
       </Modal>
