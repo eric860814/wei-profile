@@ -33,7 +33,7 @@ export default (props) => {
         modules={[Autoplay, Navigation]}
         // spaceBetween={30}
         slidesPerView={1}
-        loop
+        // loop
         autoplay
         navigation={{
           nextEl: ".swiper-next",

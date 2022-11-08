@@ -8,7 +8,7 @@ export const Data = {
   },
   experienceHead: {
     id: 0,
-    sub: "經歷",
+    sub: "工作經歷",
     title: "Experience",
     p: "描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字",
     url: "../",
@@ -97,7 +97,7 @@ export const Data = {
   },
   contactHead: {
     id: 0,
-    sub: "聯絡",
+    sub: "聯絡資訊",
     title: "Contact",
     p: "描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字",
     url: "../",
