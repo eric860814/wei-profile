@@ -71,6 +71,24 @@ const Home = () => {
                     <img alt='' src={exper1}></img>
                   </div> */}
                 </div>
+                <div className='each_list'>
+                  <div className='list_word'>
+                    <div className='list_job'>網頁前端工程師</div>
+                    <div className='list_company'>
+                      <p>愷偲品牌企劃設計有限公司</p>
+                      <span>2022/12~2023/06</span>
+                    </div>
+                    {/* <div className="list_time">2019/9~2022/9</div> */}
+                    <ul className='list_ct'>
+                      <li>1. 客製化RWD網站設計。</li>
+                      <li>2. 套版 UI介面優化/例行維護。</li>
+                      <li>3. 與 PM 溝通協調客戶需求，處理一切有關前端之問題</li>
+                    </ul>
+                  </div>
+                  {/* <div className='list_pic'>
+                    <img alt='' src={exper1}></img>
+                  </div> */}
+                </div>
               </div>
             </div>
           </div>
